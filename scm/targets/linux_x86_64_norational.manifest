@@ -1,0 +1,8 @@
+# linux_x86_64_norational -- [B893] THE NO-LL_RATIONAL GATE ARM.
+# This list is linux_x86_64's VERBATIM, deliberately: the two envs must differ in exactly one
+# thing, the `rational` feature in w3_pio/boards.json, so that a difference between the two conform
+# runs is attributable to that flag and to nothing about the filesystem.  If linux_x86_64.manifest
+# gains a line, copy it here too -- a divergence here turns this arm from a control into a second
+# variable.
+extends: host
+features/llip-vision.scm

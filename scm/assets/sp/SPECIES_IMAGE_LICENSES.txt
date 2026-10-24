@@ -1,0 +1,305 @@
+SPECIES IMAGERY SHIPPED WITH THIS PACKAGE
+========================================================================
+
+The photographs under sp/ are reproduced under the licences named below.
+Images marked CC BY require this attribution to be carried with them.
+Generated from the fetch provenance; do not edit by hand.
+
+sp/_amphibian.jpg
+    American Bullfrog (Lithobates catesbeianus) (17815275291).jpg
+    by Andrew C
+    licence: CC BY 2.0
+    source:  https://commons.wikimedia.org/wiki/File:American_Bullfrog_(Lithobates_catesbeianus)_(17815275291).jpg
+
+sp/_bear.jpg
+    Black Bear- Ursus americanus (9403810822).jpg
+    by LassenNPS
+    licence: Public domain
+    source:  https://commons.wikimedia.org/wiki/File:Black_Bear-_Ursus_americanus_(9403810822).jpg
+
+sp/_canid.jpg
+    Ezo red fox.jpg
+    by MIKI Yoshihito
+    licence: CC BY 2.0
+    source:  https://commons.wikimedia.org/wiki/File:Ezo_red_fox.jpg
+
+sp/_deer.jpg
+    Odocoileus virginianus (white-tailed deer) 7 (8269171791).jpg
+    by James St. John
+    licence: CC BY 2.0
+    source:  https://commons.wikimedia.org/wiki/File:Odocoileus_virginianus_(white-tailed_deer)_7_(8269171791).jpg
+
+sp/_felid.jpg
+    (the same image as sp/domestic-cat.jpg)
+    Cat Sitting In Front Of Tree.jpg
+    by Alexisrael
+    licence: Public domain
+    source:  https://commons.wikimedia.org/wiki/File:Cat_Sitting_In_Front_Of_Tree.jpg
+
+sp/_lagomorph.jpg
+    Eastern cottontail rabbit - DPLA - 44fa1ec441a88c9edb00f74a85ce8958.jpg
+    by Department of the Interior. U.S. Fish and Wildlife Service. National Conservation Training Center. 10/1997-8888
+    licence: Public domain
+    source:  https://commons.wikimedia.org/wiki/File:Eastern_cottontail_rabbit_-_DPLA_-_44fa1ec441a88c9edb00f74a85ce8958.jpg
+
+sp/_mustelid.jpg
+    American marten (53471944336).jpg
+    by USFWS Midwest Region from Midwest Region, United States
+    licence: Public domain
+    source:  https://commons.wikimedia.org/wiki/File:American_marten_(53471944336).jpg
+
+sp/_opossum.jpg
+    (the same image as sp/virginia-opossum.jpg)
+    Possum122708b.jpg
+    by Possum122708.JPG : Wilson44691 derivative work: WolfmanSF ( talk )
+    licence: Public domain
+    source:  https://commons.wikimedia.org/wiki/File:Possum122708b.jpg
+
+sp/_raccoon.jpg
+    (the same image as sp/northern-raccoon.jpg)
+    Raccoon (Procyon lotor) eating II.png
+    by (not stated)
+    licence: Public domain
+    source:  https://commons.wikimedia.org/wiki/File:Raccoon_(Procyon_lotor)_eating_II.png
+
+sp/_raptor.jpg
+    Red-Tailed Hawk Perched on Branch Near Forest Floor 3.jpg
+    by Amaury Laporte
+    licence: CC BY 2.0
+    source:  https://commons.wikimedia.org/wiki/File:Red-Tailed_Hawk_Perched_on_Branch_Near_Forest_Floor_3.jpg
+
+sp/_rodent.jpg
+    Eastern gray squirrel (Sciurus carolinensis) (59b67528-62ab-460f-a95b-e473868ab4cd).JPG
+    by NPS Photo
+    licence: Public domain
+    source:  https://commons.wikimedia.org/wiki/File:Eastern_gray_squirrel_(Sciurus_carolinensis)_(59b67528-62ab-460f-a95b-e473868ab4cd).JPG
+
+sp/_snake.jpg
+    California Red-Sided Garter Snake (Thamnophis sirtalis infernalis).jpg
+    by Jaden Clark
+    licence: CC BY 4.0
+    source:  https://commons.wikimedia.org/wiki/File:California_Red-Sided_Garter_Snake_(Thamnophis_sirtalis_infernalis).jpg
+
+sp/_turtle.jpg
+    Painted Turtle (Chrysemys picta) in grass, Northern Illinois - June, 2025.jpg
+    by Dmitriy Aseev
+    licence: CC BY 4.0
+    source:  https://commons.wikimedia.org/wiki/File:Painted_Turtle_(Chrysemys_picta)_in_grass,_Northern_Illinois_-_June,_2025.jpg
+
+sp/_wading.jpg
+    Le Grand Heron Profil.jpg
+    by Acarpentier
+    licence: CC BY 3.0
+    source:  https://commons.wikimedia.org/wiki/File:Le_Grand_Heron_Profil.jpg
+
+sp/american-beaver.jpg
+    North American Beaver - Castor canadensis, Pocahontas State Park, Chesterfield, Virginia (38456504706).jpg
+    by Judy Gallagher
+    licence: CC BY 2.0
+    source:  https://commons.wikimedia.org/wiki/File:North_American_Beaver_-_Castor_canadensis,_Pocahontas_State_Park,_Chesterfield,_Virginia_(38456504706).jpg
+
+sp/american-black-bear.jpg
+    Female American black bear on Snead Farm Loop Trail, Shenandoah National Park, 2007.jpg
+    by DimiTalen
+    licence: CC0
+    source:  https://commons.wikimedia.org/wiki/File:Female_American_black_bear_on_Snead_Farm_Loop_Trail,_Shenandoah_National_Park,_2007.jpg
+
+sp/american-mink.jpg
+    American Mink (5472291444).jpg
+    by Peter Trimming from Croydon, England
+    licence: CC BY 2.0
+    source:  https://commons.wikimedia.org/wiki/File:American_Mink_(5472291444).jpg
+
+sp/american-robin.jpg
+    Turdus migratorius in Central Park, New York City, 20231004 1547 2083.jpg
+    by Jakub Hałun
+    licence: CC BY 4.0
+    source:  https://commons.wikimedia.org/wiki/File:Turdus_migratorius_in_Central_Park,_New_York_City,_20231004_1547_2083.jpg
+
+sp/barred-owl.jpg
+    Barred Owl forest canopy Seattle Washington 2026.jpg
+    by Guywelch2000
+    licence: CC BY 4.0
+    source:  https://commons.wikimedia.org/wiki/File:Barred_Owl_forest_canopy_Seattle_Washington_2026.jpg
+
+sp/blue-jay.jpg
+    Blue Jay 2010-05-09.jpg
+    by Letartean
+    licence: CC BY 3.0
+    source:  https://commons.wikimedia.org/wiki/File:Blue_Jay_2010-05-09.jpg
+
+sp/canada-goose.jpg
+    Canada goose in flight.jpg
+    by Alexis Lours
+    licence: CC BY 4.0
+    source:  https://commons.wikimedia.org/wiki/File:Canada_goose_in_flight.jpg
+
+sp/common-raven.jpg
+    Common Raven Corvus corax Bryce Canyon 8109-denoise den.jpg
+    by ImagePerson
+    licence: CC BY 4.0
+    source:  https://commons.wikimedia.org/wiki/File:Common_Raven_Corvus_corax_Bryce_Canyon_8109-denoise_den.jpg
+
+sp/coyote.jpg
+    Canis latrans standing.jpg
+    by (not stated)
+    licence: Public domain
+    source:  https://commons.wikimedia.org/wiki/File:Canis_latrans_standing.jpg
+
+sp/domestic-cat.jpg
+    Cat Sitting In Front Of Tree.jpg
+    by Alexisrael
+    licence: Public domain
+    source:  https://commons.wikimedia.org/wiki/File:Cat_Sitting_In_Front_Of_Tree.jpg
+
+sp/domestic-dog.jpg
+    BobbyWonderful.jpg
+    by Jen Wong Hui Xian
+    licence: CC0
+    source:  https://commons.wikimedia.org/wiki/File:BobbyWonderful.jpg
+
+sp/eastern-chipmunk.jpg
+    Eastern Chipmunk (Tamias striatus) Pennsylvania.jpg
+    by Kaldari
+    licence: CC0
+    source:  https://commons.wikimedia.org/wiki/File:Eastern_Chipmunk_(Tamias_striatus)_Pennsylvania.jpg
+
+sp/eastern-cottontail.jpg
+    Eastern Cottontail Rabbit with torn ears (53581977321).jpg
+    by USFWS Mountain Prairie
+    licence: Public domain
+    source:  https://commons.wikimedia.org/wiki/File:Eastern_Cottontail_Rabbit_with_torn_ears_(53581977321).jpg
+
+sp/eastern-gray-squirrel.jpg
+    Grey Squirrel Sciurus Carolinensis Autumn Stowe Gardens 2025 01.jpg
+    by Julian Herzog ( Website )
+    licence: CC BY 4.0
+    source:  https://commons.wikimedia.org/wiki/File:Grey_Squirrel_Sciurus_Carolinensis_Autumn_Stowe_Gardens_2025_01.jpg
+
+sp/great-blue-heron.jpg
+    Le Grand Heron Profil.jpg
+    by Acarpentier
+    licence: CC BY 3.0
+    source:  https://commons.wikimedia.org/wiki/File:Le_Grand_Heron_Profil.jpg
+
+sp/great-horned-owl.jpg
+    Bubo virginianus -Canada-6.jpg
+    by brendan.lally
+    licence: CC BY 2.0
+    source:  https://commons.wikimedia.org/wiki/File:Bubo_virginianus_-Canada-6.jpg
+
+sp/long-tailed-weasel.jpg
+    Long-Tailed Weasel in Snow (39986233213).jpg
+    by Great Sand Dunes National Park and Preserve
+    licence: Public domain
+    source:  https://commons.wikimedia.org/wiki/File:Long-Tailed_Weasel_in_Snow_(39986233213).jpg
+
+sp/mallard.jpg
+    Mallard Drake - Flickr - treegrow.jpg
+    by Katja Schulz from Washington, D. C., USA
+    licence: CC BY 2.0
+    source:  https://commons.wikimedia.org/wiki/File:Mallard_Drake_-_Flickr_-_treegrow.jpg
+
+sp/moose.jpg
+    Alces alces moose animal.jpg
+    by Smith La Verne, U.S. Fish and Wildlife Service
+    licence: Public domain
+    source:  https://commons.wikimedia.org/wiki/File:Alces_alces_moose_animal.jpg
+
+sp/mourning-dove.jpg
+    Mourning Dove Minnesota.jpg
+    by Bradinator33
+    licence: CC0
+    source:  https://commons.wikimedia.org/wiki/File:Mourning_Dove_Minnesota.jpg
+
+sp/muskrat.jpg
+    Muskrat (51101317526).jpg
+    by USFWSAlaska
+    licence: Public domain
+    source:  https://commons.wikimedia.org/wiki/File:Muskrat_(51101317526).jpg
+
+sp/north-american-porcupine.jpg
+    Erethizon dorsatum 207819537.jpg
+    by Peter Waycik
+    licence: CC BY 4.0
+    source:  https://commons.wikimedia.org/wiki/File:Erethizon_dorsatum_207819537.jpg
+
+sp/north-american-river-otter.jpg
+    Lontra canadensis 293810755.jpg
+    by Paul Prior
+    licence: CC BY 4.0
+    source:  https://commons.wikimedia.org/wiki/File:Lontra_canadensis_293810755.jpg
+
+sp/northern-cardinal.jpg
+    Northern Cardinal (male) (22697648932).jpg
+    by Shenandoah National Park from Virginia
+    licence: Public domain
+    source:  https://commons.wikimedia.org/wiki/File:Northern_Cardinal_(male)_(22697648932).jpg
+
+sp/northern-raccoon.jpg
+    Raccoon (Procyon lotor) eating II.png
+    by (not stated)
+    licence: Public domain
+    source:  https://commons.wikimedia.org/wiki/File:Raccoon_(Procyon_lotor)_eating_II.png
+
+sp/pileated-woodpecker.jpg
+    Pileated Woodpecker on a Branch.jpg
+    by Floodmfx
+    licence: CC0
+    source:  https://commons.wikimedia.org/wiki/File:Pileated_Woodpecker_on_a_Branch.jpg
+
+sp/red-fox.jpg
+    Red Fox 2025 10 01.jpg
+    by Alexis Lours
+    licence: CC BY 4.0
+    source:  https://commons.wikimedia.org/wiki/File:Red_Fox_2025_10_01.jpg
+
+sp/red-tailed-hawk.jpg
+    Hawk eating prey.jpg
+    by Steve Jurvetson
+    licence: CC BY 2.0
+    source:  https://commons.wikimedia.org/wiki/File:Hawk_eating_prey.jpg
+
+sp/ruffed-grouse.jpg
+    Ruffed Grouse (1).jpg
+    by 72426950scott
+    licence: Public domain
+    source:  https://commons.wikimedia.org/wiki/File:Ruffed_Grouse_(1).jpg
+
+sp/snowshoe-hare.jpg
+    SNOWSHOE HARE (Lepus americanus) (8-20-13) stunner c g, n-w conejos co, co (3) (9592430167).jpg
+    by ALAN SCHMIERER
+    licence: CC0
+    source:  https://commons.wikimedia.org/wiki/File:SNOWSHOE_HARE_(Lepus_americanus)_(8-20-13)_stunner_c_g,_n-w_conejos_co,_co_(3)_(9592430167).jpg
+
+sp/striped-skunk.jpg
+    Back of striped skunk mephitis mephitis.jpg
+    by Collins John, U.S. Fish and Wildlife Service
+    licence: Public domain
+    source:  https://commons.wikimedia.org/wiki/File:Back_of_striped_skunk_mephitis_mephitis.jpg
+
+sp/virginia-opossum.jpg
+    Possum122708b.jpg
+    by Possum122708.JPG : Wilson44691 derivative work: WolfmanSF ( talk )
+    licence: Public domain
+    source:  https://commons.wikimedia.org/wiki/File:Possum122708b.jpg
+
+sp/white-tailed-deer.jpg
+    Cades-cove-deer-fighting-tn1.jpg
+    by Brian Stansberry
+    licence: CC BY 3.0
+    source:  https://commons.wikimedia.org/wiki/File:Cades-cove-deer-fighting-tn1.jpg
+
+sp/wild-turkey.jpg
+    Meleagris gallopavo (wild turkey).jpg
+    by James St. John
+    licence: CC BY 2.0
+    source:  https://commons.wikimedia.org/wiki/File:Meleagris_gallopavo_(wild_turkey).jpg
+
+------------------------------------------------------------------------
+Summary: 48 image(s)
+   18  Public domain
+   10  CC BY 2.0
+   10  CC BY 4.0
+    6  CC0
+    4  CC BY 3.0

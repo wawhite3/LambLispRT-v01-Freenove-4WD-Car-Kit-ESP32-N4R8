@@ -1,0 +1,77 @@
+# Freenove ESP32-WROVER-CAM with the SD CARD READABLE -- a separate target because SD and the
+# I2C pins cannot coexist on this part.
+#
+# *** CORRECTED 2026-10-16: THE SONAR IS NOT LOST, AND THE ORIGINAL WORDING HERE WAS WRONG IN THE
+# *** WAY THAT MATTERS.  It said "SD and the sonar/I2C pins CANNOT COEXIST ... silicon rather than
+# *** configuration".  The silicon half is true OF THE SD HOST and is a non-sequitur about the
+# *** sonar: an HC-SR04 is bit-banged GPIO, `Sonar::begin(trig, echo)` takes its pins as arguments
+# *** and reads them from `Pins` (core/Sonar.scm), so the sonar goes wherever the map says.  Only
+# *** ONE of its two pins ever collided -- echo, which had been COPIED from the 4WD map and
+# *** described no wiring, because nothing was connected.  Echo moved to GPIO 13 and the sonar now
+# *** works in this env; `core/Sonar.scm` is no longer dropped below.  A true fact about one
+# *** peripheral was allowed to stand as a fact about another sitting on the same pin.
+#
+# WHY A WHOLE ENV AND NOT A FEATURE TOGGLE.  `soc_caps.h` reports `SOC_SDMMC_USE_IOMUX` for esp32,
+# so the SD host is hard-wired to CLK 14 / CMD 15 / DAT0 2 and the pins cannot be routed anywhere
+# else.  (An esp32s3 reports `SOC_SDMMC_USE_GPIO_MATRIX` and can place them freely, which is why the
+# aitrip panel reaches its card on IO42/47/48/41 without giving anything up.)  I2C is what genuinely
+# cannot survive: it needs TWO pins and the only free ones left on this module are 14 and 15, which
+# are SD CLK and SD CMD.  The pin budget is the whole story -- the free pool on a camera-enabled
+# WROVER is just {0 2 12 13 14 15 32 33} (everything else is SPI flash, the module's PSRAM at 16/17,
+# the camera, or the console UART), SD takes three of the eight, and I2C cannot be placed in what
+# is left: GPIO 12 is MTDI and a pull-up there selects 1.8 V flash so the board will not boot, and
+# GPIO 0 low at reset enters download mode.  The buzzer also goes, because pin 2 is SD DAT0 and
+# there is nowhere to put it.
+#
+# A SEPARATE ENV RATHER THAN EDITING THE STOCK ONE, by owner decision 2026-10-07.  The stock target
+# stays byte-identical, which matters because peers build it for timing arms and a changed feature
+# list would alter a measurement without announcing itself.  It also puts the trade on the record:
+# this file IS the documentation that SD costs the sonar and the I2C bus on this module.
+#
+# NOT DELIVERABLE, deliberately.  The stock WROVER is `deliverable: true`; copying that would create
+# and FORCE-PUSH a new public repo (LambLispRT-v01-Freenove-ESP32-WROVER-sd) on the next
+# `publish_any`.  A bring-up target is not a product.
+# *** CLAIM THE BOARD AS `Freenove-ESP32-WROVER`, NEVER AS `...-sd`. ***  This env is a second NAME
+# for ONE physical board, and `w3 board` keys on the name: claiming `Freenove-ESP32-WROVER-sd`
+# succeeds, guards nothing, and lets you flash a board another session is holding while the registry
+# shows no conflict.  That is the "a claim guards a name nothing else refers to" failure in
+# CLAUDE.md, created here by adding the env rather than inherited.
+extends: Freenove-ESP32-WROVER
+
+# The I2C pins are gone, so the I2C drivers must go too -- a loaded driver on a pin the SD host owns
+# is the corruption this env exists to avoid, and `(defined? ...)` guards do not help: the Scheme is
+# present and the pins are real.  `core/Sonar.scm` WAS in this list and is not any more: see the
+# correction at the top.  PCA9685 and LCD1602 are I2C devices, so they fall with the bus.
+# NOTE THE DROP KEY IS THE LINE AS WRITTEN IN THE BASE, NOT THE STAGED BASENAME.
+# `_w3_manifest_expand` computes it as `${line##*->}`, so a bare entry is its own key: `core/Sonar.scm`
+# drops, `Sonar.scm` silently does nothing.  A wrong key is NOT an error -- the entry simply stays,
+# and the first version of this file dropped nothing at all while looking correct.
+-core/I2C.scm
+-core/Wire.scm
+-core/PCA9685.scm
+-core/LCD1602.scm
+
+# The vehicle HUD. STILL DROPPED, BUT THE REASON CHANGED 2026-10-16 -- it read "reports sonar and
+# drive telemetry it no longer has", and the sonar half is now false.  What it still lacks is DRIVE
+# telemetry: `Motor.last` lives in core/PCA9685.scm, which goes with the I2C bus.  Both halves are
+# `(defined? ...)`-guarded (hud-car.scm:54, :90) so it would LOAD here without faulting.
+# NOTE BEFORE RESTORING IT: hud-car also carries `vision-poll-group`, the transport watcher.scm uses
+# to stream frames for recognition, so dropping it is what makes this env a standalone recorder.
+# Un-dropping it is a one-line change and an owner decision, not a tidy-up.
+-demos/hud-car.scm
+
+# [P257] The rolling flight recorder, loaded by default ON THE TARGET THAT HAS A CARD.  It belongs
+# here and in no other manifest for the same reason the drivers above are REMOVED here: this env
+# exists because the card is reachable, and a recorder is useless where it is not.  Without a card
+# it is a deliberate no-op (sd-recorder-open! returns #f and every log! returns #f), so its presence
+# costs a board with an empty slot nothing but the file.
+# IT WAS IN NO MANIFEST AT ALL until 2026-10-08, which made item 3 of P257 untestable from a default
+# image -- the earlier hardware run had to push it over LLIP by hand.  A feature nobody ships is a
+# feature nobody has.
+features/sd-recorder.scm
+
+# [P257] The cost measurement for the recorder above.  A FILE rather than REPL forms because
+# dev_eval_seq refuses a form longer than a short define, and because a figure taken across host
+# round-trips measures the host too ([B811]: the same work read 83-132 ms in second position against
+# 27-32 ms in first).  Everything it times is bracketed by (micros) inside one on-device form.
+file: tests/ll_tests/sd-recorder-cost.scm -> ll_tests/sd-recorder-cost.scm
