@@ -1,0 +1,8 @@
+# Freenove-4WD-Car-Kit-ESP32-noradio -- the LX6 perf sibling's filesystem.  [P296]
+#
+# ONE LINE, DELIBERATELY: the whole difference between this and the shipped 4WD is the BUILD (no
+# radio linked, which is what frees the IRAM the NCG exec pool needs).  Nothing about the Scheme
+# side changes, and the perf tiers load bench-runner/benchmarks from the RESIDENT filesystem -- so a
+# second copy of that file list would be a second thing to keep in step, which is exactly how this
+# board lost its perf legs once already ([B1027]).
+extends: Freenove-4WD-Car-Kit-ESP32

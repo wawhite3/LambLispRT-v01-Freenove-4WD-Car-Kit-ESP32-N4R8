@@ -1,0 +1,34 @@
+;;; Settings-local.scm -- LOCAL settings overlay.  COPY THIS FILE to
+;;; scm/runtime-defaults/Settings-local.scm and edit the values below.
+;;; Copyright 2026 by Frobenius Norm LLC 2026-10-27
+
+((wifi      . 0)                  ;; 1 = join wifi_ssid at boot, 0 = leave the radio down
+ (wifi_ssid . "your-wifi-ssid")
+ (wifi_pass . "your-wifi-password"))
+
+;;; --- WHY THIS FILE EXISTS -------------------------------------------------------------------
+;;; Settings.scm is part of the distribution and rides the embedded filesystem image, so an SSID
+;;; and passphrase typed into it travel with the product.  Put them here instead:
+;;;
+;;;   - keys here OVERRIDE the same keys in Settings.scm; anything not named here is unchanged;
+;;;   - this file is read immediately after Settings.scm at startup;
+;;;   - the target manifests pull it optionally, so its absence is silent rather than a warning.
+;;;
+;;; --- THE FILE IS ONE ALIST ------------------------------------------------------------------
+;;; Exactly one parenthesised form, read in a single pass.  Comments may go anywhere -- the reader
+;;; skips them -- but KEEP THE PARENTHESES BALANCED: an unbalanced file does not raise an error.
+;;; The reader takes the first form it can parse and silently drops everything after the point
+;;; where the nesting stops making sense, so a stray bracket costs you the keys below it and says
+;;; nothing.  Putting the data at the top, as above, keeps that easy to see at a glance.
+;;;
+;;; --- WHY `wifi` IS 0 AND THE CREDENTIALS ARE PLACEHOLDERS -----------------------------------
+;;; Earlier revisions shipped a WORKING SSID and passphrase, so the example could be tested as
+;;; written rather than only read.  The access point those belonged to was a disposable one, kept
+;;; so its passphrase could be published; it has since been retired and no network we can publish
+;;; has replaced it.  Shipping the old values would be worse than a placeholder -- they name a
+;;; network that no longer answers, so a board would spend several seconds failing to join at every
+;;; boot and report a fault that is not yours.
+;;;
+;;; So `wifi` is 0 here: a template cannot know your network.  Set it to 1 once the SSID and
+;;; passphrase above are your own.  If a board does not auto-connect, it says which it saw --
+;;; `(wifi . 0)` versus no `(wifi . N)` key found at all are reported as different things.

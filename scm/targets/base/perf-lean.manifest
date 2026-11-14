@@ -1,0 +1,60 @@
+# perf-lean -- DROPS ONLY.  The peripheral payload a perf leg never touches.
+#
+# Copyright 2026 by Frobenius Norm LLC 2026-11-12
+#
+# WHY THIS EXISTS, MEASURED 2026-11-12 ON esp32s3-n32r16-00.  A `--class citable` perf leg boots the
+# board TWICE PER INDEX -- 252 boots for a 126-index BC,NCG run -- and each boot is ~9.3 s, of which
+# ~3 s is loading drivers for hardware no benchmark touches:
+#
+#     LCD1602.scm   1,825 ms   <- the single largest item in the whole boot
+#     I2C.scm         238 ms
+#     PCA9685         115 ms + 110 ms probing a device that is not attached ("No device at 95")
+#     bacnet.scm      293 ms   (BACnet/IP ready, A-side + B-side)
+#     csv, array, llip-auth, base64, rsa, dh_groups   the rest
+#
+# At 252 boots that is ~13 minutes per leg spent initialising an LCD, an I2C bus, a servo driver and
+# a building-automation stack in order to time `fib-rec`.  The owner called the 2.5 h leg a
+# productivity impairment; this is the part of it that costs nothing scientifically to remove.
+#
+# EVERY DROP BELOW IS `file-exists?`-GUARDED IN setup.scm, WHICH IS WHY THIS IS SAFE.  Checked line
+# by line before writing it: Sonar 433, I2C 435, Wire 436, PCA9685 437, PCF8574 438, LCD1602 449,
+# base64 452, rsa 453, dh_groups 454, llip-auth 455, csv 456, bacnet 457, llip-serial 447,
+# llip-server 814.  An omitted file is simply absent and setup.scm steps over it.
+#
+# WHAT IS DELIBERATELY *NOT* DROPPED, because setup.scm loads it UNCONDITIONALLY and an absent file
+# would fail the boot rather than be skipped:
+#     Compiler.scm Terminal.scm Lobs.scm Behaviors.scm Pins.scm Timers.scm ESP32.scm CommonIO.scm
+#     Buzzer.scm (423)  WiFi.scm (434)  WS2812.scm (439)  LightSensor.scm (448)  rxrs/*
+# Buzzer stays for a second reason: the startup beep is ONE 5 ms tone at 400 Hz, specified by the
+# owner 2026-09-25 as the board's readiness signal, and it is 5 ms -- not a cost worth touching.
+#
+# AND THE BENCH FILES THE LEG DOES NOT RUN GO TOO.  gc-pause-bench, pause_bench and
+# ncg-fusion-probe are separate tests with their own legs; they are staged here only because the
+# board manifest ships one image for every test.
+#
+# A DROP IS MATCHED ON THE *DESTINATION*, not the source path -- see _w3_manifest_expand.  So a
+# `file: tests/ll_tests/x.scm -> ll_tests/x.scm` entry is dropped by its right-hand side.
+
+# A DROP IS MATCHED ON THE LINE'S DESTINATION, AND FOR A BARE ENTRY THAT IS THE PATH AS WRITTEN --
+# `core/LCD1602.scm`, NOT `LCD1602.scm`.  The matcher is `d="${line##*->}"`, which for an entry with
+# no `->` returns the whole line.  Written with basenames first, this file dropped NOTHING and the
+# lean image came out byte-identical to the full one, with the drop list sitting here looking
+# applied.  `Freenove-ESP32-WROVER-sd.manifest` is the worked example and uses full source paths.
+
+-core/Sonar.scm
+-core/I2C.scm
+-core/Wire.scm
+-core/PCA9685.scm
+-core/PCF8574.scm
+-core/LCD1602.scm
+-features/base64.scm
+-features/rsa.scm
+-features/dh_groups.scm
+-features/llip-auth.scm
+-features/csv.scm
+-features/bacnet.scm
+-features/llip-serial.scm
+-tools/llip-server.scm
+-ll_tests/gc-pause-bench.scm
+-ll_tests/pause_bench.scm
+-ll_tests/ncg-fusion-probe.scm

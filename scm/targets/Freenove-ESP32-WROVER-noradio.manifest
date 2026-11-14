@@ -1,0 +1,20 @@
+# Freenove-ESP32-WROVER-noradio -- the LX6 PERF env's filesystem.  [P296]
+#
+# IDENTICAL TO THE WROVER's, DELIBERATELY, AND THAT IS THE POINT OF A ONE-LINE FILE.  The whole
+# difference between these two envs is the BUILD: the radio archives are not linked in, which is
+# what frees the IRAM the NCG exec pool needs (measured: .iram0.text 96,647 -> 78,011 B, free tail
+# 34,424 -> 53,060 B, so a 32,768 B pool goes from +1,657 B of margin to +20,293 B).  Nothing about
+# the Scheme side changes, so a second copy of that file list would be a second thing to keep in
+# step -- and the perf tiers load bench-runner/benchmarks/gc-pause-bench/pause_bench from the
+# RESIDENT filesystem, so a list that drifted would break the leg exactly as it did on the 4WD
+# ([B1027]).
+#
+# `extends:` resolves `scm/targets/base/<name>.manifest` first and falls back to
+# `scm/targets/<name>.manifest` (`_w3_manifest_expand`, w3_make.sh), which is what lets this name a
+# sibling target rather than a base.
+#
+# WIFI.scm AND THE CREDENTIALS STILL SHIP, and that is correct rather than an oversight: this env
+# has no radio LINKED, so `(wifi . 1)` in a settings overlay simply finds nothing to bring up.
+# Stripping them would make this manifest differ from the WROVER's for no gain and would stop the
+# two being comparable file-for-file -- which is the one property a perf sibling must keep.
+extends: Freenove-ESP32-WROVER

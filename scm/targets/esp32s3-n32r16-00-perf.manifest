@@ -1,0 +1,16 @@
+# esp32s3-n32r16-00-perf -- the PERF leg's image for esp32s3-n32r16-00.
+#
+# Copyright 2026 by Frobenius Norm LLC 2026-11-12
+#
+# The board's own ship list MINUS the peripheral payload (see base/perf-lean.manifest for the
+# measurement that motivates it and for why each drop is safe).  Inheriting rather than copying is
+# the point: [P251] measured scm/targets/ as 25 files expressing 14 distinct lists, several
+# differing by one line stored as a 58-line copy.  A change to esp32s3-n32r16-00.manifest reaches this image
+# automatically.
+#
+# IT STAGES TO data_staged/esp32s3-n32r16-00-perf/, NOT OVER THE BOARD'S IMAGE, AND THAT SEPARATION IS LOAD-
+# BEARING.  w3_assemble keys the staging directory on the NAME it is given, so a lean image cannot
+# end up where a release looks: w3_make_release_one reads data_staged/esp32s3-n32r16-00, which stays the full
+# list.  Staging both to one directory would make the last assemble decide what a customer package
+# contains -- a crippled filesystem shipped to a customer, with nothing in the diff to show it.
+extends: esp32s3-n32r16-00 + perf-lean
